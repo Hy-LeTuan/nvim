@@ -214,6 +214,16 @@ require("lspconfig").sqlls.setup({
 	on_attach = on_attach_map_hover,
 })
 
+require("lspconfig").ast_grep.setup({
+	capabilities = capabilities,
+	on_attach = on_attach_map_hover,
+})
+
+require("lspconfig").jdtls.setup({
+	capabilities = capabilities,
+	on_attach = on_attach_map_hover,
+})
+
 -- define a user command for setting correct python interpreter
 vim.api.nvim_create_user_command("SetPyInter", function(opts)
 	local args = {}
